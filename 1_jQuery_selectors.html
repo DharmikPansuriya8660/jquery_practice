@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Selector</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("p").hide();
+            });
+        });
+    </script>
+    <style>
+        * {
+            font-size: 1.2em;
+        }
+        
+        button {
+            padding: 20px;
+        }
+        
+        button:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button>
+        Click me to hide all paragraph.
+    </button>
+    <p>
+        This is a paragraph 1.
+    </p>
+    <p>
+        This is a paragraph 2.
+    </p>
+    <p>
+        This is a paragraph 3.
+    </p>
+    <p>
+        This is a paragraph 4.
+    </p>
+
+</body>
+
+</html>
