@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Events</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("p").dblclick(function() {
+                $(this).hide();
+            });
+            $("#button1").mouseenter(function() {
+                alert("Hey! You Click On Button");
+            });
+            $("#button2").mouseleave(function() {
+                alert("Bye! You noe Leave Button");
+            });
+            $("#para1").mousedown(function() {
+                alert("Mouse Down Over P1");
+            });
+            $("#para2").mouseup(function() {
+                alert("Mouse Up Over P1");
+            });
+            $("#para3").hover(function() {
+                    alert("You Entered P1");
+                },
+                function() {
+                    alert("Bye! you now Leave P1");
+                });
+            $("input").focus(function() {
+                $(this).css("background-color", "chocolate");
+            });
+            $("input").blur(function() {
+                $(this).css("background-color", "white");
+            });
+        });
+    </script>
+    <style>
+        * {
+            font-size: 1.2em;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        h1 {
+            color: red;
+        }
+        
+        button {
+            padding: 10px;
+        }
+        
+        #para3 {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        1 -- Here is the Double Click Event
+    </h1>
+    <p>
+        Double Click On Me, to see the magic.........!
+    </p>
+    <h1>
+        2 -- Mouse enter Event
+    </h1>
+    <button id="button1">
+        Click Me
+    </button>
+    <h1>
+        3 -- Mouse leave Event
+    </h1>
+    <button id="button2">
+        Click Me
+    </button>
+    <h1>
+        4 --Mouse Down Event
+    </h1>
+    <p id="para1">
+        Mouse Down over P1
+    </p>
+    <h1>
+        5 --Mouse Up Event
+    </h1>
+    <p id="para2">
+        Mouse Up over P1
+    </p>
+    <h1>
+        6 -- Mouse Hover Event (The hover() method takes two functions and is a combination of the mouseenter() and mouseleave() methods.)
+    </h1>
+    <p id="para3">
+        Hover over Me.....!
+    </p>
+    <h1>
+        7 -- Form( input Method )
+    </h1>
+    Name : <input type="text" name="fullname" placeholder="Full Name"> <br><br> Email : <input type="text" nam="email" placeholder="Email">
+
+</body>
+
+</html>
